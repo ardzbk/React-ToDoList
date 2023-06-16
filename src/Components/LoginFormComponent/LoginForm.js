@@ -19,11 +19,6 @@ const LoginForm = () => {
 
         if (isim.value==" " || soyad.value==" ") {
             alert("İsim ve Soyisim alanları boş bırakılamaz")
-             setNameItem(" ");
-            setSurnameItem(" ");
-            setEmailItem(" ");
-            setDateItem(" ");
-
         }
         else{
             const item = {
@@ -31,12 +26,12 @@ const LoginForm = () => {
                     value: NameItem + "   " +SurnameItem + "   " + EmailItem + "   " + DateItem
                 }
                 SetItems(oldItems => [...oldItems,item])
-                setNameItem(" ");
-                setSurnameItem(" ");
-                setEmailItem(" ");
-                setDateItem(" ");
         }
-    }
+        setNameItem(" ");
+        setSurnameItem(" ");
+        setEmailItem(" ");
+        setDateItem(" ");
+}
 
     const DeleteItem = (id) => {
         const Array = Items.filter(item =>item.id !== id)
